@@ -1,0 +1,40 @@
+{
+    "description" : "[AI_Task] yolov5 algorithm",
+    "alg_name": "keypoint_dlalg",   
+    "model_list": [{
+        "model_name":"yolov5_alg",
+        "auto_preprocess":["pad","bgr2rgb","normalize"], 
+        "preprocess_list":   [{
+            "img_height": 640,
+            "img_width": 640,
+            "img_channel": 3          
+        }],    
+        "batch_size":2,
+        "weight_path": "/dongbangfa/models/keypoints/kp_person.engine",
+        "class_name": ["person"],
+        "conf_threshold": 0.3,
+        "iou_threshold": 0.5,
+        "obj_threshold": 0.5, 
+        "multi_label": false, 
+        "model_type":"ONNX",         
+        "infer_engine":"tensorrt"
+
+    },
+    {
+        "model_name":"keypoint_dlalg",       
+        "preprocess_list":   [{
+            "img_height": 256,
+            "img_width": 192,
+            "img_channel": 3,
+            "img_max_value":255.0,
+            "img_mean": [0.485, 0.456, 0.406],
+            "img_std": [0.229, 0.224, 0.225]      
+        }],    
+        "batch_size":1,
+        "weight_path": "/dongbangfa/models/keypoints/hongwai_keypoint.engine",    
+        "infer_engine":"tensorrt"
+
+    }
+]
+}
+

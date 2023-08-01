@@ -1,0 +1,18 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "u2net_dlalg",   
+    "model_list": [{
+        "model_name":"wentie_salobj",
+        "img_height": 320,
+        "img_width": 320,
+        "img_channel": 3,        
+        "img_mean": [0.485, 0.456, 0.406],
+        "img_std": [0.229, 0.224, 0.225],        
+        "weight_path": "/dongbangfa/work_code/ditie_test/models/seg_handle/handle_20220530.onnx",
+        "name_output": ["out0"],
+        "model_type":"ONNX"       
+    }
+]
+}
+
+

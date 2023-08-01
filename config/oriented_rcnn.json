@@ -1,0 +1,21 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "orientedrcnn_dlalg",   
+    "model_list": [{
+        "model_name":"orientedrcnn_dlalg",
+        "preprocess_list":   [{
+            "img_height": 1024,
+            "img_width": 1024,
+            "img_channel": 3,
+            "img_mean": [123.675, 116.28, 103.53],
+            "img_std": [58.395, 57.12, 57.375]           
+        }],    
+        "batch_size":1,
+        "weight_path": "/dongbangfa/code/mmdeploy/end2end.engine",
+        "class_name": ["gzzc","wcgz","wcaqm","aqmzc"],
+        "conf_threshold": 0.3    
+
+    }
+]
+}
+

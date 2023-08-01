@@ -1,0 +1,21 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "u2net_dlalg",   
+    "model_list": [{
+        "model_name":"u2net",
+        "preprocess_list":   [{
+            "img_height": 512,
+            "img_width": 512,
+            "img_channel": 3,
+            "img_max_value":255.0,
+            "img_mean": [0.485, 0.485, 0.485],
+            "img_std": [0.229, 0.229, 0.229]   
+        }],       
+        "weight_path": "/dongbangfa/code/U-2-Net/out_9000.onnx",
+        "name_output": ["out0"],
+        "model_type":"ONNX"       
+    }
+]
+}
+
+

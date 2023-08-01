@@ -1,0 +1,24 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "trt_dlalg",   
+    "model_list": [{
+        "model_name":"trtnormal",
+         "preprocess_list":   [{
+                "img_height": 512,
+                "img_width": 512,
+                "img_channel": 3,
+                "img_max_value":255.0,
+                "img_mean": [0.485, 0.485, 0.485],
+                "img_std": [0.229, 0.229, 0.229]   
+            }],
+        "batch_size":4,
+        "weight_path": "/dongbangfa/study/normal.engine",
+        "name_output": ["out0"],
+        "class_name": ["normal", "fangdian"]  
+       
+    }
+   
+]
+}
+
+

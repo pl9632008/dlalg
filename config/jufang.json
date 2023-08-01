@@ -1,0 +1,31 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "jufang_dlalg",   
+    "model_list": [{
+        "model_name":"jufang_normal",
+         "preprocess_list":   [{
+                "img_height": 512,
+                "img_width": 512,
+                "img_channel": 3,
+                "img_max_value":2000.0,
+                "img_mean": [0.485, 0.485, 0.485],
+                "img_std": [0.229, 0.229, 0.229]   
+            }],
+        "weight_path": "/dongbangfa/code/jufang/normal.onnx",
+        "name_output": ["out0"],
+        "class_name": ["normal", "fangdian"],
+        "model_type":"ONNX"
+       
+    },
+    {
+        "model_name":"jufang_fangdian",    
+        "weight_path": "/dongbangfa/code/jufang/fangdian.onnx",
+        "name_output": ["out0"],
+        "class_name": ["jianduan", "qixi","xuanfu"],
+        "model_type":"ONNX"
+       
+    }
+]
+}
+
+

@@ -1,0 +1,20 @@
+{
+    "description" : "[AI_Task] dbnet algorithm",
+    "alg_name": "crnn_dlalg",   
+    "model_list": [
+    {
+        "model_name":"crnn",       
+        "preprocess_list":   [{
+            "img_height": 32,
+            "img_width": 640,
+            "img_channel": 1,
+            "img_max_value":255.0     
+        }],    
+        "batch_size":1,
+        "weight_path": "/dongbangfa/code/modelscope/handle_crnn.onnx",
+        "other_conf":{"keys_path":"/dongbangfa/work_code/dlalg/config/vocab.txt"},
+        "infer_engine":"onnxruntime"
+
+    }
+]
+}

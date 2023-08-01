@@ -1,0 +1,24 @@
+{
+    "description" : "[AI_Task] yolov5 algorithm",
+    "alg_name": "yolov5_dlalg",   
+    "model_list": [{
+        "model_name":"yolov5_alg",
+        "auto_preprocess":["pad","bgr2rgb","normalize"], 
+        "preprocess_list":   [{
+            "img_height": 896,
+            "img_width": 896,
+            "img_channel": 3          
+        }],    
+        "batch_size":2,
+        "weight_path": "/dongbangfa/models/fangbao/fangbao.engine",
+        "class_name": ["bj_bpps", "wggm", "wcaqm", "wcgz", "xy", "sly_dmyw","gzzc","aqmzc","xmbhzc","bj_pzc"],
+        "conf_threshold": 0.3,
+        "iou_threshold": 0.5,
+        "obj_threshold": 0.5, 
+        "multi_label": false,          
+        "infer_engine":"tensorrt"
+
+    }
+]
+}
+

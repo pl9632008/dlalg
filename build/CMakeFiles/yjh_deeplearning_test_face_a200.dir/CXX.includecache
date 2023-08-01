@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../app/face_recognition/face_recognition.h
+vector
+-
+memory
+-
+string
+-
+
+/wangjiadong/dlalg_new/examples/test_face_a200.cpp
+face_recognition.h
+/wangjiadong/dlalg_new/examples/face_recognition.h
+iostream
+-
+string
+-
+

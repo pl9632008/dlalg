@@ -1,0 +1,45 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "yolov5_dlalg_multi",   
+    "model_list": [
+        {
+        "model_name":"yolov5_alg_cls18",
+        "preprocess_list":   [{
+            "img_height": 896,
+            "img_width": 896,
+            "img_channel": 3          
+        }],    
+        "batch_size":4,
+        "weight_path": "/ai_server/model/model3_cls24_896_lm_20230310_b8.engine",
+        "class_name": ["bj_bpmh", "bj_bpzc", "bj_bpps", "bj_wkps", "bjdsyc", "ywzt_yfyc", "hxq_gjtps", "hxq_gjbs", "jyz_pl", "sly_bjbmyw", 
+                       "xmbhyc", "xmbhzc", "yw_nc", "yw_gkxfw", "kgg_ybh", "kgg_ybf", "kgg_ybk", "wcaqm", "aqmzc", "wcgz", "gzzc", "xy", "sly_dmyw", "gbps"],
+		"class_thresh":{"bj_bpmh": 0.3, "bj_bpps": 0.3, "bj_wkps": 0.35, "bjdsyc": 0.25, "ywzt_yfyc": 0.25, "hxq_gjtps": 0.4, "hxq_gjbs": 0.3, "jyz_pl": 0.45, "sly_bjbmyw": 0.3,
+                        "xmbhyc": 0.4, "yw_nc": 0.45, "yw_gkxfw": 0.4, "kgg_ybh": 0.4, "wcaqm": 0.5, "wcgz": 0.35, "xy": 0.35, "sly_dmyw": 0.4, "gbps": 0.35},
+        "conf_threshold": 0.3,
+        "iou_threshold": 0.5,
+        "obj_threshold": 0.5, 
+        "multi_label": false,          
+        "model_type":"ONNX",
+        "infer_engine":"tensorrt"
+    },
+    {
+        "model_name":"yolov5_alg_jmjs6",
+        "preprocess_list":   [{
+            "img_height": 896,
+            "img_width": 896,
+            "img_channel": 3          
+        }],    
+        "batch_size":4,
+        "weight_path": "/ai_server/model/jmjs_cls6_896_b8.engine",
+        "class_name": ["aqmzc", "gzzc", "hzyw", "sly_bjbmyw", "sly_dmyw", "wcaqm", "wcgz", "xdwcr", "yw_gkxfw"],
+        "class_thresh": {"hzyw": 0.30, "sly_bjbmyw": 0.1, "sly_dmyw": 0.4, "wcaqm": 0.25, "wcgz": 0.25, "xdwcr": 0.3, "yw_gkxfw": 0.35},
+        "conf_threshold": 0.3,
+        "iou_threshold": 0.5,
+        "obj_threshold": 0.5, 
+        "multi_label": false,          
+        "model_type":"ONNX",
+        "infer_engine":"tensorrt"
+    }
+]
+}
+

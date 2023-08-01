@@ -1,0 +1,25 @@
+{
+    "description" : "[AI_Task] yolov5 algorithm",
+    "alg_name": "yolov5_dlalg",   
+    "model_list": [{
+        "model_name":"yolov5_alg",  
+        "auto_preprocess":["pad","bgr2rgb","normalize"],             
+        "preprocess_list":   [{
+            "img_height": 896,
+            "img_width": 896,
+            "img_channel": 3          
+        }],    
+        "batch_size":2,
+        "weight_path": "/dongbangfa/work_code/dlalg/model/best.onnx",
+        "class_name": ["gzzc", "wcgz", "aqmzc", "wcaqm", "aqdzc", "wcaqd", "xy", "db","jystzc","wcjyst"],
+        "class_thresh":{"xy":0.7,"db":0.5,"wcjyst":0.7},
+        "conf_threshold": 0.3,
+        "iou_threshold": 0.5,
+        "obj_threshold": 0.5, 
+        "multi_label": false,
+        "infer_engine":"opencv",
+        "model_type":"ONNX" 
+    }
+]
+}
+

@@ -1,0 +1,40 @@
+{
+    "description" : "[AI_Task] choose: Classify, Detection, Segment",
+    "alg_name": "face_recognition_dlalg",   
+    "model_list": [{
+        "model_name":"scrfd",
+         "preprocess_list":   [{
+                "img_height": 640,
+                "img_width": 640,
+                "img_channel": 3,
+                "img_max_value":1.0,
+                "img_mean": [127.5, 127.5, 127.5],
+                "img_std": [128.0, 128.0, 128.0]                 
+            }],
+        "weight_path": "/dongbangfa/work_code/dlalg/model/scrfd_10g_kps.onnx",        
+        "stride": [8.0, 16.0, 32.0 ],
+        "conf_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "model_type":"ONNX",
+	"infer_engine":"opencv"
+       
+    },
+    {
+        "model_name":"mobileface",    
+        "weight_path": "/dongbangfa/code/Pytorch-MobileFaceNet/save_model/buffalo_l/w600k_r50.onnx",
+        
+        "preprocess_list":   [{
+            "img_height": 112,
+            "img_width": 112,
+            "img_channel": 3,
+            "img_max_value":1.0,
+            "img_mean": [127.5, 127.5, 127.5],
+            "img_std": [127.5, 127.5, 127.5]                 
+        }],
+        "model_type":"ONNX"
+       
+    }
+]
+}
+
+

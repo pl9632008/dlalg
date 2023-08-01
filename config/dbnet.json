@@ -1,0 +1,21 @@
+{
+    "description" : "[AI_Task] dbnet algorithm",
+    "alg_name": "dbnet_dlalg",   
+    "model_list": [
+    {
+        "model_name":"dbnet",       
+        "preprocess_list":   [{
+            "short_size":720,
+            "max_size" :4000,         
+            "img_max_value":255.0,
+            "img_mean": [0.485, 0.456, 0.406],
+            "img_std": [0.229, 0.224, 0.225]      
+        }],    
+        "batch_size":1,
+        "weight_path": "/dongbangfa/code/chineseocr_lite/models/dbnet.onnx",   
+        "other_conf_thresh":{"box_score_thresh":0.5,"scale_down_ratio":0.5,"box_thresh":0.5,"un_clip_ratio":2.0}, 
+        "infer_engine":"onnxruntime"
+
+    }
+]
+}

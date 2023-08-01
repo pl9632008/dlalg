@@ -1,0 +1,5 @@
+Log file created at: 2023/08/01 20:56:27
+Running on machine: b063a34da223
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E20230801 20:56:27.919234 17409 dl_opencvdnn.cpp:76] message: OpenCV(4.5.5) /root/opencv-4.5.5/modules/core/include/opencv2/core/private.cuda.hpp:106: error: (-216:No CUDA support) The library is compiled without CUDA support in function 'throw_no_cuda'
