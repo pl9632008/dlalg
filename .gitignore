@@ -1,2 +1,4 @@
-# *.onnx
-# *.om
+*.onnx
+*.om
+build/
+model/

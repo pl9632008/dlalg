@@ -10,7 +10,7 @@
             "img_channel": 3          
         }],    
         "batch_size":1,
-        "weight_path": "/wangjiadong/dlalg_new/model/yb_kk.om",
+        "weight_path": "/wangjiadong/dlalg_new/model/yb_kk_new.om",
 
         "class_name": ["czl_kk_down","czl_kk_up","czl_ybf","czl_ybh","czl_ybk"],
         "conf_threshold": 0.3,
