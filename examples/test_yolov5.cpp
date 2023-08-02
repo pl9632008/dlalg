@@ -24,13 +24,8 @@ int main(int argc, char ** argv)
     yolov5.reset(new yjh_deeplearning::AIAlgorithm());
     int ret;
     ret = yolov5->Init(argv[1],0);
-
-    // std::unique_ptr<yjh_deeplearning::Yolov5Alg > yolov5;
-    // yolov5.reset(new yjh_deeplearning::Yolov5Alg() );
-
-    // ret = yolov5->Init(argv[1]);
     
-    
+
     if(ret != 0)
     {
         std::cout<<"Init error "<<ret<<std::endl;
