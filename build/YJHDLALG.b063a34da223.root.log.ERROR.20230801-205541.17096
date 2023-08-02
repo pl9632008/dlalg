@@ -1,5 +1,0 @@
-Log file created at: 2023/08/01 20:55:41
-Running on machine: b063a34da223
-Running duration (h:mm:ss): 0:00:00
-Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
-E20230801 20:55:41.633529 17096 dl_ascendcl.cpp:59] InitAscendCLModel error, need npu
